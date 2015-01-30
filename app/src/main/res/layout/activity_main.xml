@@ -1,0 +1,153 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gridLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="9"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:rowCount="11"
+    android:useDefaultMargins="true"
+    tools:context=".MainActivity"
+    android:background="#ff6f756d">
+
+
+
+    <ToggleButton
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:text="@string/toggle"
+        android:id="@+id/unitToggleButton"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:textOff="Choose lb / in Units"
+        android:textOn="Choose kg / m Units"
+        android:clickable="true"
+        android:onClick="tgl_btn_clicked" />
+
+    <TextView
+        android:id="@+id/weightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_gravity="fill_horizontal"
+        android:layout_row="1"
+        android:gravity="right"
+        android:padding="8dp"
+        android:text="@string/weight"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#fffff756"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/weightEditText"
+        android:layout_width="165dp"
+        android:layout_height="42dp"
+        android:layout_column="1"
+        android:layout_row="1"
+        android:height="33dp"
+        android:background="#ffffe7fd"
+        android:ems="10"
+        android:inputType="number|numberDecimal"
+        android:labelFor="@id/weightTextView"
+        android:maxLength="6"
+        android:enabled="false"
+        android:editable="false" />
+
+    <TextView
+        android:id="@+id/heightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_gravity="fill_horizontal"
+        android:layout_row="2"
+        android:gravity="right"
+        android:padding="8dp"
+        android:text="@string/height"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:textColor="#fffff756" />
+
+    <EditText
+        android:id="@+id/heightEditText"
+        android:layout_width="165dp"
+        android:layout_height="42dp"
+        android:layout_column="1"
+        android:layout_row="2"
+        android:height="33dp"
+        android:ems="10"
+        android:inputType="number|numberDecimal"
+        android:labelFor="@id/heightTextView"
+        android:maxLength="6"
+        android:background="#ffffe7fd" />
+
+    <Button
+        android:layout_width="140dp"
+        android:layout_height="42dp"
+        android:text="@string/buttonText"
+        android:id="@+id/button"
+        android:layout_row="4"
+        android:layout_column="1"
+        android:textColor="#fffcfff6"
+        android:background="@android:color/holo_orange_light"
+        android:onClick="calculateBtn"
+        android:clickable="true"
+        android:enabled="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/bmi"
+        android:id="@+id/bmiTextView"
+        android:layout_row="5"
+        android:layout_column="0"
+        android:layout_gravity="fill_horizontal"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#fff9fff6" />
+
+    <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="200dp"
+    android:layout_height="40dp"
+    android:id="@+id/bmiResultLinearLayout">
+
+        <TextView
+            android:layout_width="165dp"
+            android:layout_height="42dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/bmiResultTextView"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:background="#ff9defff" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/bmiValueTextView"
+        android:layout_row="6"
+        android:layout_column="0"
+        android:layout_gravity="fill_horizontal"
+        android:gravity="center"
+        android:text="@string/bmiValue"
+        android:textColor="#ffffe7fd"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="165dp"
+        android:layout_height="42dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/bmiValueResultTextView"
+        android:layout_row="6"
+        android:layout_column="1"
+        android:gravity="center"
+        android:background="#ff9defff" />
+
+</GridLayout>
